@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Expense Tracker</h1>
+        </header>
+
+        <div class="summary-container">
+            <div class="summary-card income">
+                <h3>Total Income</h3>
+                <span id="totalIncome" class="amount">₹0.00</span>
+            </div>
+            <div class="summary-card expense">
+                <h3>Total Expense</h3>
+                <span id="totalExpense" class="amount">₹0.00</span>
+            </div>
+            <div class="summary-card balance">
+                <h3>Balance</h3>
+                <span id="balance" class="amount">₹0.00</span>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button class="btn btn-primary" onclick="window.location.href='add.html'">+ Add Transaction</button>
+            <div class="filter-group">
+                <label for="filterCategory">Filter by:</label>
+                <select id="filterCategory">
+                    <option value="all">All Categories</option>
+                    <option>Food</option>
+                    <option>Travel</option>
+                    <option>Shopping</option>
+                    <option>Bills</option>
+                    <option>Other</option>
+                </select>
+            </div>
+        </div>
+
+        <section class="transactions-section">
+            <h2>Recent Transactions</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Description</th>
+                            <th>Category</th>
+                            <th>Type</th>
+                            <th>Amount</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="transactionList">
+                        <!-- Transactions will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <!-- Scripts: ensure storage loads before app -->
+    <script src="js/storage.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
