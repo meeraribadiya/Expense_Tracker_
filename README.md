@@ -1,6 +1,6 @@
 # Expense Tracker
 
-Live Demo: expense-tracker-9o9m.vercel.app
+Live Demo: https://expense-tracker-9o9m.vercel.app/
 
 A simple and modern Expense Tracker application to help you manage your personal finances. Keep track of your income and expenses, visualize your balance, and filter transactions by category.
 
